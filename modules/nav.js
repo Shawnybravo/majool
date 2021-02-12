@@ -24,7 +24,7 @@ export const navListeners = () => {
     navItems.forEach((item, index) => {
         document.querySelector(`.${item}-button`).addEventListener('click', () => {
             item = capitalize(item);
-            item.init();
+            eval(item).init();
         });
     })
 }  
